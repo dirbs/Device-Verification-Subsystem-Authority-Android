@@ -48,26 +48,31 @@ NO EXPRESS OR IMPLIED LICENSES TO ANY PARTY'S PATENT RIGHTS ARE GRANTED BY THIS 
 ###	System Requirements
 ####	Software Requirements
 -	JDK 1.8 or more
--	Android Studio 3.1.2
--	Android SDK v27 (minimum)
+-	Android Studio 3.4.2
+-	Android SDK v28 (minimum)
 -	Minimum Android version 16
--	Gradle 4.4
--	Android Plugin version 3.1.2
+-	Gradle 5.4.1
+-	Android Gradle Plugin version 3.5.1
 
 ###	Keycloak Configuration
 -	Loggedin in IAM
 -	Go to “Clients” section
--	Click on “DVS-app”  client
+-	Click on “sso”  client or create a new client if not already present.
 -	In settings tab enter callback “com.qualcomm.dvsauthorized:/callback” in “Valid Redirect URL” field
 
-###	App Configuration
+##	App Configuration
 -	To change the logo of app go to app/res/drawable folder and paste logo file but make sure the file name should be company_logo.png
 -	To change the colors of the app go to app/res/values/colors.xml file and mention hex color code of your required color
--	Go to app/res/values/strings.xml file and add IAM URL in value section of  “iam_url”
-<string name=”iam_url”>Enter IAM URL HERE</string>
--	Add Realm name in value section of  “realm” field
-<string name=”realm”>ENTER REALM NAME HERE</string>
--	Add API Gateway URL in value section of  “api_gateway” field
-<string name=”api_gateway_url”>ENTER API GATEWAY URL HERE</string>
--	Add client id in value section of “client_id”
-<string name=”client_id”>ENTER CLIENT ID HERE</string>
+-	Go to \app\src\main\java\com\qualcomm\dvsauthorized\mUtils\Constants.java file and make following changes.
+  -	Add IAM URL for variable AUTH_REALMS_URL
+  
+    public static String AUTH_REALMS_URL = "Enter IAM URL HERE";
+  -	Add Realm name for variable AUTH_REALMS
+  
+    public static String AUTH_REALMS = "ENTER REALM NAME HERE";
+  -	Add API Gateway URL for variable IMEI_STATUS_URL
+  
+    public static String IMEI_STATUS_URL = "ENTER API GATEWAY URL HERE";
+  -	Add client id for variable CLIENT_ID
+  
+    public static String CLIENT_ID = "ENTER CLIENT ID HERE";
