@@ -1,39 +1,30 @@
 <!--
-         Copyright (c) 2018 Qualcomm Technologies, Inc.
-         All rights reserved.
-         Redistribution and use in source and binary forms, with or without modification, are permitted (subject to the limitations in the disclaimer below) provided that the following conditions are met:
-         Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
-         Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
-         Neither the name of Qualcomm Technologies, Inc. nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
-         NO EXPRESS OR IMPLIED LICENSES TO ANY PARTY'S PATENT RIGHTS ARE GRANTED BY THIS LICENSE. THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
--->
+  ~ Copyright (c) 2018-2019 Qualcomm Technologies, Inc.
+  ~ All rights reserved.
+  ~ Redistribution and use in source and binary forms, with or without modification, are permitted (subject to the limitations in the disclaimer below) provided that the following conditions are met:
+  ~ * Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+  ~ * Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+  ~ * Neither the name of Qualcomm Technologies, Inc. nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+  ~ * The origin of this software must not be misrepresented; you must not claim that you wrote the original software. If you use this software in a product, an acknowledgment is required by displaying the trademark/log as per the details provided here: [https://www.qualcomm.com/documents/dirbs-logo-and-brand-guidelines]
+  ~ * Altered source versions must be plainly marked as such, and must not be misrepresented as being the original software.
+  ~ * This notice may not be removed or altered from any source distribution.
+  ~ NO EXPRESS OR IMPLIED LICENSES TO ANY PARTY'S PATENT RIGHTS ARE GRANTED BY THIS LICENSE. THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+  -->
 <resources>
-
-    <string name="iam_url">ENTER IAM URL HERE</string>
-
-    <string name="realm">ENTER REALM NAME HERE</string>
-
-    <string name="client_id">ENTER CLIENT ID HERE</string>
-
-    <string name="api_gateway_url">ENTER API GATEWAY URL HERE</string>
-
 
     <string name="app_name">DVS Authorized</string>
     <string name="enter_imei">Enter IMEI</string>
-    <string name="check_imei_status">Check IMEI Status</string>
     <string name="device_status">Device Status</string>
     <string name="imei">IMEI</string>
     <string name="block_as_of_date">Block as of Date</string>
-    <string name="link_to_help">Link to Mitigation Help Content</string>
-    <string name="reason_noncompliance">Reason for Non-Compliance</string>
     <string name="imei_compliance_status">IMEI Compliance Status</string>
     <string name="model_name">Model Name</string>
     <string name="brand">Brand</string>
     <string name="error_network_timeout">Problem connecting to server. Please check your internet connection and try again.</string>
-    <string name="error_auth_failure">Authentication problem. Please login again to continue.</string>
-    <string name="error_server_error">Problem connecting to server. Please update your application if you are using an older version.</string>
+    <string name="error_server_error">Problem connecting to server. Please try again later.</string>
     <string name="error_network_error">No Internet Connection! Please enable wifi or mobile data and try again.</string>
-    <string name="error_parse_error">Problem getting reponse. Please try again or try updating the app if problem persists.</string>
+    <string name="error_json_parsing">Server error. Please try again later.</string>
+    <string name="session_expired">Session Expired</string>
     <string name="stolen_status">Lost/Stolen Status</string>
     <string name="radio_access_tech">Radio Access Technology</string>
     <string name="operating_system">Operating System</string>
@@ -42,27 +33,43 @@
     <string name="model_number">Model Number</string>
     <string name="reg_status">Registration Status</string>
     <string name="title_activity_main_result">MainResultActivity</string>
-    <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
     <string name="seen_with">Subscribers Seen With IMEI</string>
     <string name="paired_imsis">Paired Subscribers</string>
     <string name="no_record">No record found</string>
     <string name="login">Login</string>
     <string name="verify_imei">Verify IMEI</string>
     <string name="length_error">IMEI must be 14 to 16 characters long</string>
-    <string name="hexa_error">IMEI must contain A-F, a-f and 0-9 only</string>
+    <string name="hexa_error">IMEI must contain A–F, a–f and 0–9 only</string>
     <string name="title_activity_main_tab">MainTabActivity</string>
     <string name="profile">Profile</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="name">Name</string>
     <string name="username">Username</string>
     <string name="email">Email</string>
     <string name="per_condition_classification_state">Per Condition Classification State</string>
-    <string name="imei_per_informational_condition">IMEI per Informational Condition</string>
     <string name="subscribers">Subscribers</string>
     <string name="load_more">Load More</string>
+    <string name="submit">Submit</string>
+    <string name="dial_text">Dial *#06# to check the IMEI of device</string>
+    <string name="barcode_text">Place the barcode within the window to scan the barcode of IMEI.</string>
+    <string name="logout">Logout</string>
+    <string name="problem_logging_out">Problem logging out, Please try again.</string>
+    <string name="open_scanner">Open Scanner</string>
+    <string name="scan_barcode">Scan Barcode</string>
+    <string name="session_expired_detail">Your session has expired. Please login again to continue using DVS</string>
+    <string name="wait">Wait...</string>
+    <string name="yes_enable">Yes, enable it!</string>
+    <string name="no">No</string>
+    <string name="no_internet">No Internet!</string>
+    <string name="not_available">N / A</string>
+    <string name="imsi">IMSI</string>
+    <string name="msisdn">MSISDN</string>
+    <string name="last_seen">Last Seen</string>
 
+    <string name="permission_access">Permission Access</string>
+    <string name="camera_permission_needed">Camera permission needed for scanner.</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+    <string name="permission_denied">Permission denied for camera.</string>
 </resources>
+
