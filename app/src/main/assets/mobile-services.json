@@ -1,8 +1,0 @@
-{
-  "realm": "3gca",
-  "auth-server-url": "http://192.168.100.56:8081/auth",
-  "ssl-required": "none",
-  "resource": "dvs-ios",
-  "public-client": true,
-  "confidential-port": 0
-}

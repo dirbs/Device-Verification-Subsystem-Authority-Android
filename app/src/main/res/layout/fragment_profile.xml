@@ -1,61 +1,67 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--
-         Copyright (c) 2018 Qualcomm Technologies, Inc.
-         All rights reserved.
-         Redistribution and use in source and binary forms, with or without modification, are permitted (subject to the limitations in the disclaimer below) provided that the following conditions are met:
-         Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
-         Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
-         Neither the name of Qualcomm Technologies, Inc. nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
-         NO EXPRESS OR IMPLIED LICENSES TO ANY PARTY'S PATENT RIGHTS ARE GRANTED BY THIS LICENSE. THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
--->
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright (c) 2018-2019 Qualcomm Technologies, Inc.
+  ~ All rights reserved.
+  ~ Redistribution and use in source and binary forms, with or without modification, are permitted (subject to the limitations in the disclaimer below) provided that the following conditions are met:
+  ~ * Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+  ~ * Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+  ~ * Neither the name of Qualcomm Technologies, Inc. nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+  ~ * The origin of this software must not be misrepresented; you must not claim that you wrote the original software. If you use this software in a product, an acknowledgment is required by displaying the trademark/log as per the details provided here: [https://www.qualcomm.com/documents/dirbs-logo-and-brand-guidelines]
+  ~ * Altered source versions must be plainly marked as such, and must not be misrepresented as being the original software.
+  ~ * This notice may not be removed or altered from any source distribution.
+  ~ NO EXPRESS OR IMPLIED LICENSES TO ANY PARTY'S PATENT RIGHTS ARE GRANTED BY THIS LICENSE. THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+  -->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_height="match_parent"
-    android:layout_width="match_parent"
     android:name="com.qualcomm.dvsauthorized.DeviceStatusFragment"
-    tools:context=".fragments.DeviceStatusFragment">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".mImeiStatus.view.fragments.DeviceStatusFragment">
+
+    <ImageView
+        android:id="@+id/company_logo"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="8dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/company_logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
+
     <TextView
         android:id="@+id/device_status_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="8dp"
         android:text="@string/profile"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:layout_marginBottom="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="16dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
-    <ImageView
-        android:id="@+id/title_after"
-        android:layout_width="wrap_content"
-        android:layout_height="80dp"
-        android:src="@drawable/title_after"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/device_status_text"
-        android:scaleType="centerInside"
-        android:layout_margin="8dp"
-        android:contentDescription="TODO" />
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/company_logo" />
+
     <TableLayout
+        android:id="@+id/profile_con"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/title_after"
-        android:layout_marginTop="8dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginBottom="32dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="24dp"
         android:background="#000"
-        android:id="@+id/profile_con">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/device_status_text">
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent" >
+            android:layout_height="match_parent">
 
             <TextView
                 android:id="@+id/name_label"
@@ -68,118 +74,140 @@
                 android:gravity="center_vertical"
                 android:padding="4dp"
                 android:text="@string/name"
-
                 android:textAlignment="center"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                android:textColor="#000" />
+                android:textColor="#000000" />
 
             <TextView
                 android:id="@+id/name_txt"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:text="-"
-                android:layout_weight="2"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                android:textAlignment="center"
                 android:layout_gravity="center_vertical"
-                android:gravity="center_vertical"
-                android:background="@color/colorCellValue"
-                android:padding="4dp"
                 android:layout_marginTop="1dp"
+                android:layout_marginEnd="1dp"
                 android:layout_marginRight="1dp"
-                android:layout_marginBottom="1dp"/>
+                android:layout_marginBottom="1dp"
+                android:layout_weight="2"
+                android:background="@color/colorCellValue"
+                android:gravity="center_vertical"
+                android:padding="4dp"
+                android:text="-"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/colorDarkGrey"/>
 
         </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent" >
+            android:layout_height="match_parent">
+
             <TextView
                 android:id="@+id/username_label"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:text="@string/username"
-                android:layout_weight="1"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                android:textAlignment="center"
                 android:layout_gravity="center_vertical"
-                android:gravity="center_vertical"
-                android:background="@color/colorCellHead"
-
-                android:padding="4dp"
-                android:layout_marginLeft="1dp"
-                android:layout_marginRight="1dp"
+                android:layout_marginStart="1dp"
+                android:layout_marginEnd="1dp"
                 android:layout_marginBottom="1dp"
-                android:textColor="#000"/>
+                android:layout_weight="1"
+                android:background="@color/colorCellHead"
+                android:gravity="center_vertical"
+                android:padding="4dp"
+                android:text="@string/username"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="#000000" />
 
             <TextView
                 android:id="@+id/username_txt"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:text="-"
-                android:layout_weight="2"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                android:textAlignment="center"
                 android:layout_gravity="center_vertical"
-                android:gravity="center_vertical"
-                android:background="@color/colorCellValue"
-                android:padding="4dp"
+                android:layout_marginEnd="1dp"
                 android:layout_marginRight="1dp"
-                android:layout_marginBottom="1dp"/>
+                android:layout_marginBottom="1dp"
+                android:layout_weight="2"
+                android:background="@color/colorCellValue"
+                android:gravity="center_vertical"
+                android:padding="4dp"
+                android:text="-"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/colorDarkGrey"/>
         </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent" >
+            android:layout_height="match_parent">
+
             <TextView
                 android:id="@+id/email_label"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:text="@string/email"
-                android:layout_weight="1"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                android:textAlignment="center"
                 android:layout_gravity="center_vertical"
-                android:gravity="center_vertical"
-                android:background="@color/colorCellHead"
-
-                android:padding="4dp"
-                android:layout_marginLeft="1dp"
-                android:layout_marginRight="1dp"
+                android:layout_marginStart="1dp"
+                android:layout_marginEnd="1dp"
                 android:layout_marginBottom="1dp"
-                android:textColor="#000"/>
+                android:layout_weight="1"
+                android:background="@color/colorCellHead"
+                android:gravity="center_vertical"
+                android:padding="4dp"
+                android:text="@string/email"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="#000000" />
 
             <TextView
                 android:id="@+id/email_txt"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:text="-"
-                android:layout_weight="2"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                android:textAlignment="center"
                 android:layout_gravity="center_vertical"
-                android:gravity="center_vertical"
-                android:background="@color/colorCellValue"
-                android:padding="4dp"
+                android:layout_marginEnd="1dp"
                 android:layout_marginRight="1dp"
-                android:layout_marginBottom="1dp"/>
+                android:layout_marginBottom="1dp"
+                android:layout_weight="2"
+                android:background="@color/colorCellValue"
+                android:gravity="center_vertical"
+                android:padding="4dp"
+                android:text="-"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/colorDarkGrey"/>
         </TableRow>
-
-
     </TableLayout>
-    <Button
+
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/logout_btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="6dp"
-        android:layout_marginRight="6dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="32dp"
         android:backgroundTint="@color/colorRaisedBtn"
-        android:text="Logout"
+        android:text="@string/logout"
         android:textAllCaps="false"
         android:textColor="@color/colorWhite"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/profile_con" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profile_con"
+        tools:ignore="RtlHardcoded, RtlSymmetry, UnusedAttribute" />
 
-</android.support.constraint.ConstraintLayout>
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="1dp"
+        android:elevation="2dp"
+        android:indeterminateTint="@color/colorWhite"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/logout_btn"
+        app:layout_constraintEnd_toEndOf="@id/logout_btn"
+        app:layout_constraintTop_toTopOf="@id/logout_btn"
+        tools:ignore="RtlHardcoded,UnusedAttribute" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
